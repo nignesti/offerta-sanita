@@ -3,67 +3,176 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sito per il tuo studio sanitario — Niccolò</title>
-<meta name="description" content="Sito web semplice e veloce per studi infermieristici, ambulatori e professionisti sanitari. 149 euro una volta sola, consegna in 3 giorni.">
+<title>Siti web per studi clinici e ambulatori — Niccolò</title>
+<meta name="description" content="Sito web semplice e veloce per studi clinici, ambulatori e professionisti sanitari. 149 euro una volta sola, bozza gratuita, consegna in 3 giorni.">
 <style>
-:root{--ink:#12211f;--muted:#5b6b68;--bg:#f7f6f2;--card:#fff;--accent:#0f766e;--line:#e2ded5}
+:root{--ink:#14211f;--muted:#5d6b68;--line:#e5e0d6;--bg:#fbfaf7;--accent:#0f766e;--sand:#f1ece3}
 *{box-sizing:border-box}
-body{margin:0;font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-.wrap{max-width:720px;margin:0 auto;padding:28px 22px 64px}
-header{padding:18px 0 8px}
-h1{font-size:30px;line-height:1.2;margin:0 0 10px;letter-spacing:-.5px}
-h2{font-size:20px;margin:38px 0 10px}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:ui-serif,Georgia,"Times New Roman",serif;letter-spacing:-.4px;margin:0 0 12px}
+h1{font-size:clamp(31px,7.5vw,50px);line-height:1.08}
+h2{font-size:clamp(23px,5vw,30px);margin-top:0}
+h3{font-size:18px;letter-spacing:0}
 p{margin:0 0 14px}
-.lead{color:var(--muted);font-size:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}
-.price{display:flex;align-items:baseline;gap:8px;margin:0 0 6px}
-.price b{font-size:34px;letter-spacing:-1px}
-ul{padding-left:20px;margin:0 0 14px}
-li{margin:6px 0}
-.cta{display:block;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:15px 18px;border-radius:12px;font-weight:600;margin:10px 0 6px}
-.cta.secondary{background:#fff;color:var(--accent);border:1px solid var(--accent)}
-.small{font-size:14px;color:var(--muted)}
-footer{border-top:1px solid var(--line);margin-top:44px;padding-top:16px;font-size:13px;color:var(--muted)}
-b.q{display:block;margin:18px 0}
+a{color:var(--accent)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.top b{font-family:ui-serif,Georgia,serif;font-size:17px}
+.top a{text-decoration:none;font-weight:600}
+.hero{padding:46px 0 34px}
+.hero p.lead{font-size:clamp(17px,4.3vw,20px);color:var(--muted);max-width:56ch}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:15px 22px;border-radius:10px;font-weight:600}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;align-items:center}
+.row .small{color:var(--muted);font-size:14px}
+section{padding:36px 0;border-top:1px solid var(--line)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:640px){.grid.two{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.card h3{margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.price{display:flex;align-items:baseline;gap:10px;margin-bottom:8px}
+.price b{font-family:ui-serif,Georgia,serif;font-size:40px;letter-spacing:-1.5px}
+.price span{color:var(--muted);font-size:14px}
+ul.plain{list-style:none;padding:0;margin:0}
+ul.plain li{padding-left:24px;position:relative;margin:9px 0}
+ul.plain li:before{content:"—";position:absolute;left:0;color:var(--accent)}
+.faq dt{font-weight:600;margin-top:16px}
+.faq dd{margin:4px 0 0;color:var(--muted)}
+.tag{display:inline-block;background:var(--sand);border-radius:99px;padding:5px 13px;font-size:13px;color:var(--muted);margin-bottom:16px}
+.preview{display:block;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;text-decoration:none;color:inherit}
+.preview .bar{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line);background:#f7f4ee}
+.preview .dot{width:9px;height:9px;border-radius:50%;background:#d9d2c4}
+.preview .body{padding:18px}
+.preview h3{margin-bottom:4px}
+.preview p{color:var(--muted);font-size:15px;margin:0}
+footer.site{border-top:1px solid var(--line);padding:28px 0 46px;font-size:14px;color:var(--muted)}
+.sticky{position:sticky;bottom:0;background:rgba(251,250,247,.96);border-top:1px solid var(--line);padding:12px 22px;display:flex;justify-content:center}
+.sticky .btn{width:100%;max-width:420px;text-align:center}
+.steps{counter-reset:s}
+.steps .card{counter-increment:s}
+.steps .card h3:before{content:counter(s) ". ";color:var(--accent)}
 </style>
 </head>
 <body>
+
 <div class="wrap">
-<header>
-<h1>Il sito del tuo studio, fatto come si deve</h1>
-<p class="lead">Per infermieri liberi professionisti, fisioterapisti, psicologi e piccoli ambulatori. Consegna in 3 giorni, prezzo una volta sola, nessun abbonamento.</p>
-</header>
+  <div class="top">
+    <b>Siti per studi clinici</b>
+    <a href="https://wa.me/393202104320?text=Buongiorno%2C%20vorrei%20una%20bozza%20gratuita%20del%20sito%20del%20mio%20studio">Scrivimi</a>
+  </div>
 
-<div class="card">
-<div class="price"><b>149 €</b><span class="small">una volta sola, IVA inclusa</span></div>
-<ul>
-<li>Una pagina con chi sei, cosa fai, dove ricevi</li>
-<li>Pulsanti WhatsApp, telefono ed email in evidenza</li>
-<li>Testi scritti da me, partendo da quattro righe che mi scrivi tu</li>
-<li>Velocità e lettura da telefono curate a mano</li>
-<li>Dominio collegato e hosting spiegato, senza costi nascosti</li>
-</ul>
-<p class="small">Su richiesta, 249 € con sistema di prenotazione e modulo per i nuovi pazienti.</p>
+  <div class="hero">
+    <span class="tag">Niccolò · infermiere, informatica per passione</span>
+    <h1>Il sito del tuo studio, online in tre giorni.</h1>
+    <p class="lead">Una pagina chiara con i servizi, gli orari e il pulsante per contattarti. La scrivo io, la guardi tu dal telefono, e se non ti piace non paghi niente.</p>
+    <div class="row">
+      <a class="btn" href="https://wa.me/393202104320?text=Buongiorno%2C%20vorrei%20una%20bozza%20gratuita%20del%20sito%20del%20mio%20studio">Chiedi una bozza gratuita</a>
+      <span class="small">149 € una volta sola · nessun abbonamento</span>
+    </div>
+  </div>
 </div>
 
-<h2>Come lavoro</h2>
-<p>Mi mandi quattro righe su cosa fai e su chi vuoi raggiungere. Entro 24 ore ti mando una bozza online, da aprire dal telefono. Se non ti convince non paghi niente e ci salutiamo. Se ti convince, in altri due giorni il sito è tuo, con il codice leggibile e la possibilità di modificare i testi da solo.</p>
+<section>
+  <div class="wrap">
+    <h2>Cosa ricevi</h2>
+    <div class="grid two">
+      <div class="card"><h3>Una pagina che si legge dal telefono</h3><p>Testi brevi, caratteri grandi, niente menu complicati. Il paziente capisce in dieci secondi cosa fai e come prenotare.</p></div>
+      <div class="card"><h3>Contatti a un tocco</h3><p>WhatsApp, telefono e indicazioni sempre in vista, senza doverli cercare.</p></div>
+      <div class="card"><h3>Testi scritti da me</h3><p>Parto da quattro righe che mi scrivi tu. Niente frasi generiche copiate: il tono resta il tuo.</p></div>
+      <div class="card"><h3>Nessun costo nascosto</h3><p>Sito statico e veloce, senza plugin da aggiornare. Hosting gratuito; un dominio tuo costa circa 10 € l'anno.</p></div>
+    </div>
+  </div>
+</section>
 
-<h2>Chi sono</h2>
-<p>Mi chiamo Niccolò, faccio l'infermiere e ho la passione per l'informatica. So cosa cerca una persona quando deve fidarsi di un professionista sanitario: informazioni chiare, contatti immediati, nessuna promessa esagerata. Il sito lo costruisco con quell'occhio lì, non con quello di un'agenzia.</p>
+<section>
+  <div class="wrap">
+    <h2>Guarda com'è fatto</h2>
+    <p>Questa è una pagina dimostrativa, dello stesso tipo che consegno: aprila dal telefono e immagina la tua.</p>
+    <a class="preview" href="esempio/">
+      <div class="bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+      <div class="body">
+        <h3>Studio Ferraro — fisioterapia a Firenze</h3>
+        <p>Esempio di sito per uno studio: servizi, orari, prezzi, domande frequenti e prenotazione su WhatsApp. Apri l'esempio →</p>
+      </div>
+    </a>
+  </div>
+</section>
 
-<h2>Domande che mi fanno</h2>
-<p><b class="q">Devo avere già le foto e i testi?</b>No. Le foto bastano quelle del telefono, i testi li scrivo io.</p>
-<p><b class="q">Chi lo aggiorna dopo?</b>Tu, in due minuti: ti mostro come cambiare una riga di testo. Oppure mi scrivi e lo faccio io.</p>
-<p><b class="q">Quanto costa tenerlo online?</b>Zero se resta sull'hosting gratuito, circa 10 € l'anno se vuoi un dominio tuo.</p>
-<p><b class="q">Serve la partita IVA?</b>No, emetto prestazione occasionale con ricevuta.</p>
+<section>
+  <div class="wrap">
+    <h2>Come funziona</h2>
+    <div class="grid three steps">
+      <div class="card"><h3>Mi scrivi quattro righe</h3><p>Cosa fai, dove ricevi, cosa deve capire subito il paziente.</p></div>
+      <div class="card"><h3>Ricevi la bozza</h3><p>Entro 24 ore, online e guardabile dal telefono.</p></div>
+      <div class="card"><h3>Va online</h3><p>Se ti convince, in altri due giorni è tuo, dominio collegato.</p></div>
+    </div>
+  </div>
+</section>
 
-<a class="cta" href="https://wa.me/393202104320?text=Buongiorno%2C%20ho%20visto%20la%20pagina%20del%20sito%20per%20studi%20sanitari%3A%20mi%20interessa%20una%20bozza.">Scrivimi su WhatsApp</a>
-<p class="small" style="text-align:center">320 210 4320 — rispondo io, di persona.</p>
+<section>
+  <div class="wrap">
+    <h2>Quanto costa</h2>
+    <div class="grid two">
+      <div class="card">
+        <div class="price"><b>149 €</b><span>una volta sola</span></div>
+        <ul class="plain">
+          <li>Una pagina completa: chi sei, servizi, orari, contatti</li>
+          <li>Testi scritti e impaginati</li>
+          <li>Dominio collegato e hosting spiegato</li>
+          <li>Bozza gratuita prima di pagare</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="price"><b>249 €</b><span>con le prenotazioni</span></div>
+        <ul class="plain">
+          <li>Tutto quello che c'è nella versione da 149 €</li>
+          <li>Modulo per richiedere appuntamento</li>
+          <li>Pagina con i servizi in dettaglio</li>
+          <li>Una modifica inclusa dopo la messa online</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:16px;color:var(--muted);font-size:15px">Ricevuta di prestazione occasionale. Nessun canone, nessun rinnovo automatico.</p>
+  </div>
+</section>
 
-<footer>
-Niccolò — Firenze. Prestazione occasionale, ricevuta emessa. I testi di questo sito sono scritti a mano, con l'aiuto di strumenti automatici per la revisione.
+<section>
+  <div class="wrap">
+    <h2>Chi sono</h2>
+    <p>Mi chiamo Niccolò, faccio l'infermiere e ho la passione per l'informatica. Realizzo siti web per studi clinici e ambulatori.</p>
+    <p>So cosa cerca una persona quando deve fidarsi di un professionista sanitario: informazioni chiare, contatti immediati, nessuna promessa esagerata. Il sito lo costruisco con quell'occhio lì, non con quello di un'agenzia.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Domande</h2>
+    <dl class="faq">
+      <dt>Devo avere già foto e testi?</dt>
+      <dd>No. Le foto bastano quelle del telefono, i testi li scrivo io partendo da poche righe tue.</dd>
+      <dt>Chi lo aggiorna dopo?</dt>
+      <dd>Tu, in due minuti: ti mostro come cambiare una riga. Oppure mi scrivi e lo faccio io.</dd>
+      <dt>Quanto costa tenerlo online?</dt>
+      <dd>Zero con l'hosting gratuito. Circa 10 € l'anno se vuoi un dominio tuo, intestato a te.</dd>
+      <dt>Serve la partita IVA per pagare?</dt>
+      <dd>No. Emetto ricevuta di prestazione occasionale.</dd>
+      <dt>E se non mi piace la bozza?</dt>
+      <dd>Non paghi nulla e ci salutiamo. Non insisto e non ti ricontatto.</dd>
+    </dl>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    Niccolò — Firenze. Siti web per studi clinici e ambulatori. Prestazione occasionale con ricevuta.<br>
+    WhatsApp 320 210 4320 · rispondo io, di persona.
+  </div>
 </footer>
+
+<div class="sticky">
+  <a class="btn" href="https://wa.me/393202104320?text=Buongiorno%2C%20vorrei%20una%20bozza%20gratuita%20del%20sito%20del%20mio%20studio">Chiedi una bozza gratuita</a>
 </div>
+
 </body>
 </html>
